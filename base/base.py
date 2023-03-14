@@ -1,6 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 
-from element import wrong_password
+from element import wrong_password, successfully_added
 from utlist import BrowserDriven
 
 
@@ -23,6 +23,13 @@ class BaseHandle(object):  # 点击元素
 
     def base_text(self):  # 获取文本元素
         pass
+
+
 def popover_content():
-    text= BrowserDriven.get_driver().find_elements_by_css_selector(".layui-layer-ico2").text
+    text = BrowserDriven.get_driver().find_elements_by_css_selector(".layui-layer-ico2").text
     print(text)
+
+
+def switching_forms(text):
+    driver = BrowserDriven.get_driver()
+    driver.switch_to.frame(driver.find_element_by_tag_name(text))

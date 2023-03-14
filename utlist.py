@@ -1,12 +1,11 @@
 import time
-import unittest
 
 from selenium import webdriver
 
 from element import tpshop
 
 
-class BrowserDriven():
+class BrowserDriven(object):
     driver = None
 
     @classmethod
@@ -23,6 +22,7 @@ class BrowserDriven():
         if cls.driver:
             cls.driver.quit()
             cls.driver = None
+
 
 if __name__ == '__main__':
     BrowserDriven.get_driver()

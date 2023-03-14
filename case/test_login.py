@@ -1,7 +1,7 @@
+"""登录页"""
 from nose_parameterized import parameterized
 import time
 import unittest
-
 from base.base import popover_content
 from data.read_yaml import read_yaml
 from element import tpshop
