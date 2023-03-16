@@ -7,6 +7,7 @@ from element import tpshop
 
 class BrowserDriven(object):
     driver = None
+    exit_status = True
 
     @classmethod
     def get_driver(cls):
@@ -19,9 +20,13 @@ class BrowserDriven(object):
 
     @classmethod
     def quit_driver(cls):
-        if cls.driver:
+        if cls.driver and cls.exit_status:
             cls.driver.quit()
             cls.driver = None
+
+    @classmethod
+    def driver_exit_status(cls, status):
+        cls.exit_status = status
 
 
 if __name__ == '__main__':

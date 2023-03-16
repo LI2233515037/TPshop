@@ -10,6 +10,9 @@ shopping_cart_settlement = By.CSS_SELECTOR, 'ui-button-122'  # 去购物车结�
 home_login = By.CSS_SELECTOR, '.red'  # 登录按钮
 input_box = By.CSS_SELECTOR, '#q'  # 输入框
 search_button = By.CSS_SELECTOR, '.ecsc-search-button'  # 搜索按钮
+shopping_trolley = By.CSS_SELECTOR, '.share-shopcar-index'  # 购物车
+my_order = By.CSS_SELECTOR, '//*[contains(text(),"{}")]'  # 我的订单
+product_categories = By.CSS_SELECTOR, '[title="{}"]'  # 全部商品分类
 """登录页"""
 login_username = By.CSS_SELECTOR, '#username'  # 用户名
 login_password = By.CSS_SELECTOR, '#password'  # 密码
@@ -21,3 +24,11 @@ commodity = By.XPATH, "//*[@class='shop_name2']/*[contains(text(),'{}')]"  # 商
 """商品详情页"""
 add_to_shopping_cart = By.CSS_SELECTOR, '#join_cart'  # 加入购物车
 buy_it_now_price = By.CSS_SELECTOR, '#join_cart_now'  # 立即购买
+"""购物车页面"""
+check_all = By.CSS_SELECTOR,'.checkCartAll'#全选
+keep_shopping=By.CSS_SELECTOR,'.gwc-jxgw'#继续购物
+to_settle_accounts= By.CSS_SELECTOR,'.gwc-qjs'#去结算
+delete_selected_items =By.CSS_SELECTOR, '#removeGoods'#删除选中商品
+"""核对订单页面"""
+submit_order=By.CSS_SELECTOR,'.Sub-orders'#提交订单
+order_submitted_successfully = By.CSS_SELECTOR,'.erhuh'#订单提交成功

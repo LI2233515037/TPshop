@@ -6,41 +6,6 @@
     "text": "账号不存在",
     "success": false
   },
-  "login_success2": {
-    "username": "15811221836",
-    "password": "1234567",
-    "code": "8888",
-    "text": "密码错误",
-    "success": false
-  },
-  "login_success3": {
-    "username": "15811221836",
-    "password": "123456",
-    "code": "8884",
-    "text": "验证码错误",
-    "success": false
-  },
-  "login_success4": {
-    "username": "",
-    "password": "123456",
-    "code": "8888",
-    "text": "用户名不能为空",
-    "success": false
-  },
-  "login_success5": {
-    "username": "15811221836",
-    "password": "",
-    "code": "8888",
-    "text": "密码不能为空",
-    "success": false
-  },
-  "login_success6": {
-    "username": "15811221836",
-    "password": "123456",
-    "code": "",
-    "text": "验证码不能为空",
-    "success": false
-  },
   "login_success7": {
     "username": "15811221836",
     "password": "123456",

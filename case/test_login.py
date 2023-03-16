@@ -2,7 +2,7 @@
 from nose_parameterized import parameterized
 import time
 import unittest
-from base.base import popover_content
+from base.base import popover_content, Image_save_path
 from data.read_yaml import read_yaml
 from element import tpshop
 from page.tp_home import ProxyHome
@@ -36,15 +36,15 @@ class TestLogin(unittest.TestCase):
                 time.sleep(10)
                 title = self.driver.title
                 self.assertIn(expected, title)
-            except Exception as a:
-                self.driver.get_screenshot_as_file("E:\\项目01\\TPshop\\screenshot\\{}_{}.png".format(a, time.strftime('%Y%m%d_%H%M%S')))
+            except AssertionError as a:
+                Image_save_path(a)
                 raise a
         else:
             try:
                 text = self.login.get_the_text()
                 self.assertIn(expected, text)
-            except Exception as b:
-                self.driver.get_screenshot_as_file("E:\\项目01\\TPshop\\screenshot\\{}_{}.png".format(b, time.strftime('%Y%m%d_%H%M%S')))
+            except AssertionError as b:
+                Image_save_path(b)
                 raise b
 
 
