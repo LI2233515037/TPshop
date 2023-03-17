@@ -26,7 +26,6 @@ class HandleDetailPage(BaseHandle):
 
     def handle_successfully_added_text(self):
         switching_forms(successfully_added)
-
         return self.handle_product_list.page_successfully_added_text().text
 
 

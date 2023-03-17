@@ -34,11 +34,11 @@ def popover_content():
     print(text)
 
 
-def switching_forms(text):
+def switching_forms(text):#表单切换
     driver = BrowserDriven.get_driver()
-    driver.switch_to.frame(driver.find_element_by_tag_name(text))
+    driver.switch_to.frame(driver.find_element_by_css_selector(text))
 
-def Image_save_path(text):
+def Image_save_path(text):#图片保存路径
     driver = BrowserDriven.get_driver()
     driver.get_screenshot_as_file(BASE_DIR + "\\screenshot\\{}_{}.png".format(text, time.strftime('%Y%m%d_%H%M%S')))
 

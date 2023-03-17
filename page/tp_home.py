@@ -24,8 +24,9 @@ class PageHome(BasePage):
     def page_shopping_trolley(self):
         return self.position_element(self.shopping_trolley)
 
-    def page_my_order(self):
-        return self.position_element(self.my_order)
+    def page_my_order(self, test):
+        order = (self.my_order[0], self.my_order[1].format(test))
+        return self.position_element(order)
 
 
 class HandleHome(BaseHandle):
@@ -44,8 +45,8 @@ class HandleHome(BaseHandle):
     def handle_shopping_trolley(self):
         self.base_click(self.handle_home.page_shopping_trolley())
 
-    def handle_my_order(self):
-        self.base_click(self.handle_home.page_my_order())
+    def handle_my_order(self,text):
+        self.base_click(self.handle_home.page_my_order(text))
 
 
 class ProxyHome(object):
@@ -62,5 +63,5 @@ class ProxyHome(object):
     def go_tu_shopping_trolley(self):  # 跳转购物车页面
         self.proxy_home.handle_shopping_trolley()
 
-    def go_tu_personal_center(self):  # 跳转个人中心
-        self.proxy_home.handle_my_order()
+    def go_tu_personal_center(self,text):  # 跳转个人中心
+        self.proxy_home.handle_my_order(text)

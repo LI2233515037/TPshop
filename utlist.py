@@ -2,7 +2,7 @@ import time
 
 from selenium import webdriver
 
-from element import tpshop
+from element import tpshop, cookis
 
 
 class BrowserDriven(object):
@@ -15,7 +15,11 @@ class BrowserDriven(object):
             cls.driver = webdriver.Chrome()
             cls.driver.get(tpshop)
             cls.driver.maximize_window()
-            cls.driver.implicitly_wait(10)
+            cls.driver.implicitly_wait(5)
+            cls.driver.delete_all_cookies()
+            for cookies in cookis:
+                cls.driver.add_cookie(cookies)
+            cls.driver.refresh()
         return cls.driver
 
     @classmethod
@@ -30,6 +34,9 @@ class BrowserDriven(object):
 
 
 if __name__ == '__main__':
-    BrowserDriven.get_driver()
-    time.sleep(10)
+    driver = BrowserDriven.get_driver()
+    # driver.delete_all_cookies()
+    # time.sleep(100)
+    # print(driver.get_cookies())
+    time.sleep(5)
     BrowserDriven.quit_driver()
