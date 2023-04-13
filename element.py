@@ -20,10 +20,13 @@ login_code = By.CSS_SELECTOR, '#verify_code'  # 验证码
 login_submit = By.CSS_SELECTOR, '.J-login-submit'  # 登录按钮
 wrong_password = By.CSS_SELECTOR, '.layui-layer-content'  # 密码错误
 """商品列表页"""
-commodity = By.XPATH, "//*[@class='shop_name2']/*[contains(text(),'{}')]"  # 商品
+commodity = By.LINK_TEXT, "{}"  # 商品
+shop_name = By.CSS_SELECTOR, 'shop_name'  # 积分商品
+
 """商品详情页"""
 add_to_shopping_cart = By.CSS_SELECTOR, '#join_cart'  # 加入购物车
 buy_it_now_price = By.CSS_SELECTOR, '#join_cart_now'  # 立即购买
+exchange_immediately = By.CSS_SELECTOR, '#buy_now'  # 立即兑换
 """购物车页面"""
 check_all = By.CSS_SELECTOR, '.checkall'  # 全选
 keep_shopping = By.CSS_SELECTOR, '.gwc-jxgw'  # 继续购物

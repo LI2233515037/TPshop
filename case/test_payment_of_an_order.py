@@ -45,3 +45,7 @@ class TestPaymentOrder(unittest.TestCase):
         except AssertionError as a:
             Image_save_path(a)
             raise a
+
+
+if __name__ == '__main__':
+    unittest.main()

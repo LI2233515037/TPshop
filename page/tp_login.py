@@ -10,7 +10,7 @@ class PageLogin(BasePage):
         self.login_username = login_username  # 用户名
         self.login_password = login_password  # 密码
         self.login_code = login_code  # 验证码
-        self.login_submit = login_submit  # 登录按钮\
+        self.login_submit = login_submit  # 登录按钮
         self.wrong_password = wrong_password
 
     def page_login_username(self):

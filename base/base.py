@@ -5,6 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 from element import wrong_password, successfully_added
 from utlist import BrowserDriven
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
@@ -34,15 +35,17 @@ def popover_content():
     print(text)
 
 
-def switching_forms(text):#表单切换
+def switching_forms(text):  # 表单切换
     driver = BrowserDriven.get_driver()
     driver.switch_to.frame(driver.find_element_by_css_selector(text))
 
-def Image_save_path(text):#图片保存路径
+
+def Image_save_path(text):  # 图片保存路径
     driver = BrowserDriven.get_driver()
     driver.get_screenshot_as_file(BASE_DIR + "\\screenshot\\{}_{}.png".format(text, time.strftime('%Y%m%d_%H%M%S')))
 
-def switch_of_windows():#窗口切换
+
+def switch_of_windows():  # 窗口切换
     driver = BrowserDriven.get_driver()
     handle = driver.window_handles
     driver.switch_to.window(handle[-1])

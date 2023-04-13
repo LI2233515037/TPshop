@@ -38,5 +38,5 @@ if __name__ == '__main__':
     # driver.delete_all_cookies()
     # time.sleep(100)
     # print(driver.get_cookies())
-    time.sleep(5)
+    time.sleep(10)
     BrowserDriven.quit_driver()
