@@ -1,6 +1,6 @@
 ﻿"""列表页"""
-from base.base import BasePage, BaseHandle
-from element import commodity, shop_name
+from base.base import BasePage, BaseHandle, switching_forms
+from element import commodity, shop_name, shopping_cart, successfully_added_text, successfully_added
 
 
 class PageProductList(BasePage):
@@ -8,6 +8,8 @@ class PageProductList(BasePage):
         super().__init__()
         self.commodity = commodity  # 点击商品
         self.shop_name = shop_name  # 积分商品列表
+        self.shopping_cart = shopping_cart  # 加入购物车
+        self.successfully_added_text = successfully_added_text  # 加入购物车文案
 
     def page_commodity(self, text):
         mag = (self.commodity[0], self.commodity[1].format(text))
@@ -15,6 +17,12 @@ class PageProductList(BasePage):
 
     def page_shop_name(self):
         return self.position_element(self.shop_name)
+
+    def page_shopping_cart(self):
+        return self.position_element(self.shopping_cart)
+
+    def page_successfully_added_text(self):
+        return self.position_element(self.successfully_added_text)
 
 
 class HandleProductList(BaseHandle):
@@ -27,6 +35,13 @@ class HandleProductList(BaseHandle):
     def handle_shop_name(self):
         self.base_click(self.handle_product_list.page_shop_name())
 
+    def handle_shopping_cart(self):
+        self.base_click(self.handle_product_list.page_shopping_cart())
+
+    def handle_successfully_added_text(self):
+        switching_forms(successfully_added)
+        return self.handle_product_list.page_successfully_added_text().text
+
 
 class ProxyProductList(object):
     def __init__(self):
@@ -37,3 +52,9 @@ class ProxyProductList(object):
 
     def proxy_shop_name(self):
         self.proxy_product_list.handle_shop_name()
+
+    def proxy_shopping_cart(self):
+        self.proxy_product_list.handle_shopping_cart()
+
+    def proxy_successfully_added_text(self):
+        return self.proxy_product_list.handle_successfully_added_text()

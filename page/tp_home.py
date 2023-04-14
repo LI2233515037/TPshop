@@ -1,6 +1,6 @@
 """首页"""
 from base.base import BasePage, BaseHandle
-from element import home_login, search_button, input_box, shopping_trolley, my_order
+from element import home_login, search_button, input_box, shopping_trolley, my_order, women_wear
 
 
 class PageHome(BasePage):
@@ -11,6 +11,7 @@ class PageHome(BasePage):
         self.search_button = search_button  # 搜索按钮
         self.shopping_trolley = shopping_trolley  # 购物车
         self.my_order = my_order  # 我的订单
+        self.women_wear = women_wear  # 女装
 
     def page_home_login(self):
         return self.position_element(self.home_login)
@@ -27,6 +28,9 @@ class PageHome(BasePage):
     def page_my_order(self, test):
         order = (self.my_order[0], self.my_order[1].format(test))
         return self.position_element(order)
+
+    def page_women_wear(self):
+        return self.position_element(self.women_wear)
 
 
 class HandleHome(BaseHandle):
@@ -45,8 +49,11 @@ class HandleHome(BaseHandle):
     def handle_shopping_trolley(self):
         self.base_click(self.handle_home.page_shopping_trolley())
 
-    def handle_my_order(self,text):
+    def handle_my_order(self, text):
         self.base_click(self.handle_home.page_my_order(text))
+
+    def handle_women_wear(self):
+        self.base_click(self.handle_home.page_women_wear())
 
 
 class ProxyHome(object):
@@ -63,5 +70,7 @@ class ProxyHome(object):
     def go_tu_shopping_trolley(self):  # 跳转购物车页面
         self.proxy_home.handle_shopping_trolley()
 
-    def go_tu_personal_center(self,text):  # 跳转个人中心
+    def go_tu_personal_center(self, text):  # 跳转个人中心
         self.proxy_home.handle_my_order(text)
+    def go_tu_women_wear(self):#跳转女装
+        self.proxy_home.handle_women_wear()

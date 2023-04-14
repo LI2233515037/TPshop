@@ -13,6 +13,8 @@ search_button = By.CSS_SELECTOR, '.ecsc-search-button'  # 搜索按钮
 shopping_trolley = By.CSS_SELECTOR, '.share-shopcar-index'  # 购物车
 my_order = By.XPATH, '//*[contains(text(),"{}")]'  # 我的订单
 product_categories = By.CSS_SELECTOR, '[title="{}"]'  # 全部商品分类
+women_wear = By.LINK_TEXT, '女装'
+
 """登录页"""
 login_username = By.CSS_SELECTOR, '#username'  # 用户名
 login_password = By.CSS_SELECTOR, '#password'  # 密码
@@ -22,6 +24,7 @@ wrong_password = By.CSS_SELECTOR, '.layui-layer-content'  # 密码错误
 """商品列表页"""
 commodity = By.LINK_TEXT, "{}"  # 商品
 shop_name = By.CSS_SELECTOR, 'shop_name'  # 积分商品
+shopping_cart = By.LINK_TEXT, '加入购物车'  # 加入购物车
 
 """商品详情页"""
 add_to_shopping_cart = By.CSS_SELECTOR, '#join_cart'  # 加入购物车
@@ -45,7 +48,13 @@ obligation = By.LINK_TEXT, '{}'  # 待付款
 immediate_payment = By.CSS_SELECTOR, '.ps_lj'  # 立即支付
 Query_box = By.CSS_SELECTOR, '#submit_order'  # 搜索框
 inquire = By.CSS_SELECTOR, '#submit_order'  # 查询
+"""订单详情页"""
+cancellation_order = By.CSS_SELECTOR, ".ddn3"  # 取消订单
+whether_to_cancel_the_order = By.CSS_SELECTOR,".layui-layer-btn0"#是否取消订单
 
+
+
+".layui-layer-ico2"
 cookis = [{'domain': '127.0.0.1', 'httpOnly': False, 'name': 'parent_region', 'path': '/', 'secure': False,
            'value': '%5B%7B%22id%22%3A3%2C%22name%22%3A%22%u4E1C%u57CE%u533A%22%7D%2C%7B%22id%22%3A14%2C%22name%22%3A%22%u897F%u57CE%u533A%22%7D%2C%7B%22id%22%3A22%2C%22name%22%3A%22%u5D07%u6587%u533A%22%7D%2C%7B%22id%22%3A30%2C%22name%22%3A%22%u5BA3%u6B66%u533A%22%7D%2C%7B%22id%22%3A39%2C%22name%22%3A%22%u671D%u9633%u533A%22%7D%2C%7B%22id%22%3A83%2C%22name%22%3A%22%u4E30%u53F0%u533A%22%7D%2C%7B%22id%22%3A105%2C%22name%22%3A%22%u77F3%u666F%u5C71%u533A%22%7D%2C%7B%22id%22%3A115%2C%22name%22%3A%22%u6D77%u6DC0%u533A%22%7D%2C%7B%22id%22%3A145%2C%22name%22%3A%22%u95E8%u5934%u6C9F%u533A%22%7D%2C%7B%22id%22%3A159%2C%22name%22%3A%22%u623F%u5C71%u533A%22%7D%2C%7B%22id%22%3A188%2C%22name%22%3A%22%u901A%u5DDE%u533A%22%7D%2C%7B%22id%22%3A204%2C%22name%22%3A%22%u987A%u4E49%u533A%22%7D%2C%7B%22id%22%3A227%2C%22name%22%3A%22%u660C%u5E73%u533A%22%7D%2C%7B%22id%22%3A245%2C%22name%22%3A%22%u5927%u5174%u533A%22%7D%2C%7B%22id%22%3A264%2C%22name%22%3A%22%u6000%u67D4%u533A%22%7D%2C%7B%22id%22%3A281%2C%22name%22%3A%22%u5E73%u8C37%u533A%22%7D%5D'},
           {'domain': '127.0.0.1', 'expiry': 1681547176, 'httpOnly': False, 'name': 'district_id', 'path': '/',

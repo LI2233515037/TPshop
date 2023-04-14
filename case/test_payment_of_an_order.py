@@ -36,10 +36,8 @@ class TestPaymentOrder(unittest.TestCase):
         self.proxy_personal_center.go_tu_check_the_order()
         switch_of_windows()
         self.proxy_payment_order.proxy_payment_success()
-        # logging.info()
         try:
             text = self.proxy_payment_order.proxy_order_payment_success()
-            # logging.info(text)
             log_log()
             self.assertIn("订单提交成功，我们将在第一时间给你发货", text)
         except AssertionError as a:

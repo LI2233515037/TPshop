@@ -30,8 +30,8 @@ class TestSearchForItemsToAddToCart(unittest.TestCase):
         self.driver.get(tpshop)
 
     def test_shopping_cart(self):
-        self.home_login.go_tu_detail_page("【套餐赠耳机】HUAWEI/华为 畅享8 Plus 全面屏手机")
-        self.proxy_product_list.proxy_commodity("【套餐赠耳机】HUAWEI/华为 畅享8 Plus 全面屏手机")
+        self.home_login.go_tu_detail_page("vivoy85手机")
+        self.proxy_product_list.proxy_commodity("直降200元◆vivo Y85全面屏手机 vivoy85手机 y75 y97官方旗舰店")
         self.proxy_detail_page.proxy_add_to_shopping_cart()
         try:
             text = self.proxy_detail_page.proxy_successfully_added_text()

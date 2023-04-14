@@ -30,8 +30,9 @@ class BaseHandle(object):  # 点击元素
         pass
 
 
-def popover_content():
-    text = BrowserDriven.get_driver().find_elements_by_css_selector(".layui-layer-ico2").text
+def popover_content(text):
+    # text = BrowserDriven.get_driver().find_elements_by_css_selector(text).text
+    BrowserDriven.get_driver().find_elements_by_css_selector(text)
     print(text)
 
 
