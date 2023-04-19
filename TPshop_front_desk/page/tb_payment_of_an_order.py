@@ -1,6 +1,6 @@
 ﻿"""订单支付"""
-from base.base import BasePage, BaseHandle
-from element import pay_on_delivery, Confirm_payment_method, order_payment_success
+from TPshop_front_desk.base.base import BasePage, BaseHandle
+from TPshop_front_desk.element import pay_on_delivery, Confirm_payment_method, order_payment_success
 
 
 class PagePaymentOrder(BasePage):

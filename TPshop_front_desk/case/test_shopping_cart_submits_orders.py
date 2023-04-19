@@ -3,14 +3,12 @@ import logging
 import time
 import unittest
 
-from base.base import Image_save_path
-from element import tpshop
-from page.tb_check_the_order import ProxyCheckTheOider
-from page.tb_shopping_trolley import ProxyShoppingTrolley
-from page.tp_detail_page import ProxyDetailPage
-from page.tp_home import ProxyHome
-from page.tp_product_list import ProxyProductList
-from utlist import BrowserDriven
+from TPshop_front_desk.base.base import Image_save_path
+from TPshop_front_desk.element import tpshop
+from TPshop_front_desk.page.tb_check_the_order import ProxyCheckTheOider
+from TPshop_front_desk.page.tb_shopping_trolley import ProxyShoppingTrolley
+from TPshop_front_desk.page.tp_home import ProxyHome
+from TPshop_front_desk.utlist import BrowserDriven
 
 
 class TestShoppingCartSubmitsOrders(unittest.TestCase):

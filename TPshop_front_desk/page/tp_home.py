@@ -1,6 +1,6 @@
 """首页"""
-from base.base import BasePage, BaseHandle
-from element import home_login, search_button, input_box, shopping_trolley, my_order, women_wear
+from TPshop_front_desk.base.base import BasePage, BaseHandle
+from TPshop_front_desk.element import home_login, search_button, input_box, shopping_trolley, my_order, women_wear
 
 
 class PageHome(BasePage):

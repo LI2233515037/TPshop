@@ -1,6 +1,6 @@
 ﻿"""列表页"""
-from base.base import BasePage, BaseHandle, switching_forms
-from element import commodity, shop_name, shopping_cart, successfully_added_text, successfully_added
+from TPshop_front_desk.base.base import BasePage, BaseHandle, switching_forms
+from TPshop_front_desk.element import commodity, shop_name, shopping_cart, successfully_added_text, successfully_added
 
 
 class PageProductList(BasePage):

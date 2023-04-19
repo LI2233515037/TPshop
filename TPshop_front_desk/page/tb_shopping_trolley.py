@@ -1,6 +1,6 @@
 ﻿"""购物车页面"""
-from base.base import BasePage, BaseHandle
-from element import delete_selected_items, to_settle_accounts, keep_shopping, check_all
+from TPshop_front_desk.base.base import BasePage, BaseHandle
+from TPshop_front_desk.element import delete_selected_items, to_settle_accounts, keep_shopping, check_all
 
 
 class PageShoppingTrolley(BasePage):

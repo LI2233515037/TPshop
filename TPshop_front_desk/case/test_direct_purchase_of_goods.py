@@ -1,11 +1,11 @@
 ﻿"""直接购买商品"""
 import unittest
 
-from base.base import Image_save_path
-from element import tpshop
-from page.tp_home import ProxyHome
-from page.tp_product_list import ProxyProductList
-from utlist import BrowserDriven
+from TPshop_front_desk.base.base import Image_save_path
+from TPshop_front_desk.element import tpshop
+from TPshop_front_desk.page.tp_home import ProxyHome
+from TPshop_front_desk.page.tp_product_list import ProxyProductList
+from TPshop_front_desk.utlist import BrowserDriven
 
 
 class TestDirectPurchaseOfGoods(unittest.TestCase):

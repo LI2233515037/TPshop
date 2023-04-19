@@ -2,12 +2,12 @@
 import time
 import unittest
 
-from base.base import switch_of_windows
-from element import tpshop
-from page.tb_order_details_page import ProxyOrderDetailsPage
-from page.tb_personal_center import ProxyPersonalCenter
-from page.tp_home import ProxyHome
-from utlist import BrowserDriven
+from TPshop_front_desk.base.base import switch_of_windows
+from TPshop_front_desk.element import tpshop
+from TPshop_front_desk.page.tb_order_details_page import ProxyOrderDetailsPage
+from TPshop_front_desk.page.tb_personal_center import ProxyPersonalCenter
+from TPshop_front_desk.page.tp_home import ProxyHome
+from TPshop_front_desk.utlist import BrowserDriven
 
 
 class TestCancellatinoOrder(unittest.TestCase):

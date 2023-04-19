@@ -1,7 +1,6 @@
 ﻿"""商品详情页"""
-from base.base import BasePage, BaseHandle, switching_forms
-from element import add_to_shopping_cart, successfully_added_text, successfully_added, exchange_immediately
-from utlist import BrowserDriven
+from TPshop_front_desk.base.base import BasePage, BaseHandle, switching_forms
+from TPshop_front_desk.element import add_to_shopping_cart, successfully_added_text, successfully_added, exchange_immediately
 
 
 class PageDetailPage(BasePage):

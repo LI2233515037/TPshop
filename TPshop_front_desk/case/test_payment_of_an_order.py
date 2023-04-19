@@ -1,15 +1,14 @@
 ﻿"""订单支付"""
-import logging
 import time
 import unittest
 
-from base.base import switch_of_windows, Image_save_path
-from element import tpshop
-from log.tpshop_log import log_log
-from page.tb_payment_of_an_order import ProxyPaymentOrder
-from page.tb_personal_center import ProxyPersonalCenter
-from page.tp_home import ProxyHome
-from utlist import BrowserDriven
+from TPshop_front_desk.base.base import switch_of_windows, Image_save_path
+from TPshop_front_desk.element import tpshop
+from TPshop_front_desk.log.tpshop_log import log_log
+from TPshop_front_desk.page.tb_payment_of_an_order import ProxyPaymentOrder
+from TPshop_front_desk.page.tb_personal_center import ProxyPersonalCenter
+from TPshop_front_desk.page.tp_home import ProxyHome
+from TPshop_front_desk.utlist import BrowserDriven
 
 
 class TestPaymentOrder(unittest.TestCase):

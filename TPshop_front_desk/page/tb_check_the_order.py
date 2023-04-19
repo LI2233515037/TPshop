@@ -1,6 +1,6 @@
 ﻿"""提交成功页面"""
-from base.base import BasePage, BaseHandle, switch_of_windows
-from element import submit_order, order_submitted_successfully
+from TPshop_front_desk.base.base import BasePage, BaseHandle, switch_of_windows
+from TPshop_front_desk.element import submit_order, order_submitted_successfully
 
 
 class PageCheckTheOider(BasePage):

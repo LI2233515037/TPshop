@@ -1,6 +1,6 @@
 ﻿"""订单详情页"""
-from base.base import BasePage, BaseHandle, switching_forms, popover_content
-from element import cancellation_order, whether_to_cancel_the_order
+from TPshop_front_desk.base.base import BasePage, BaseHandle, popover_content
+from TPshop_front_desk.element import cancellation_order, whether_to_cancel_the_order
 
 
 class PageOrderDetailsPage(BasePage):

@@ -1,11 +1,11 @@
 ﻿"""积分兑换商品"""
 import unittest
 
-from element import tpshop
-from page.tp_detail_page import ProxyDetailPage
-from page.tp_home import ProxyHome
-from page.tp_product_list import ProxyProductList
-from utlist import BrowserDriven
+from TPshop_front_desk.element import tpshop
+from TPshop_front_desk.page.tp_detail_page import ProxyDetailPage
+from TPshop_front_desk.page.tp_home import ProxyHome
+from TPshop_front_desk.page.tp_product_list import ProxyProductList
+from TPshop_front_desk.utlist import BrowserDriven
 
 
 class TestRedeemPointsForGoods(unittest.TestCase):

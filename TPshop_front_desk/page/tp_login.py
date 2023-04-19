@@ -1,7 +1,6 @@
 """登录页"""
-from base.base import BasePage, BaseHandle
-from element import login_username, login_password, login_code, login_submit, wrong_password
-from utlist import BrowserDriven
+from TPshop_front_desk.base.base import BasePage, BaseHandle
+from TPshop_front_desk.element import login_username, login_password, login_code, login_submit, wrong_password
 
 
 class PageLogin(BasePage):

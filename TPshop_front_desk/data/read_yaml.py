@@ -7,7 +7,7 @@ import json
 
 
 def read_yaml():
-    with open('E:\\项目01\\TPshop\\data\\login.json', encoding="utf-8")as f:
+    with open('/TPshop_front_desk/data/login.json', encoding="utf-8")as f:
         read = json.load(f)
         login = []
         for data in read.values():

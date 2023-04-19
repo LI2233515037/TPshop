@@ -3,8 +3,7 @@ import time
 
 from selenium.webdriver.support.wait import WebDriverWait
 
-from element import wrong_password, successfully_added
-from utlist import BrowserDriven
+from TPshop_front_desk.utlist import BrowserDriven
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 

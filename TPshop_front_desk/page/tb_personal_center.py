@@ -1,6 +1,6 @@
 ﻿"""个人中心"""
-from base.base import BasePage, BaseHandle
-from element import obligation, immediate_payment
+from TPshop_front_desk.base.base import BasePage, BaseHandle
+from TPshop_front_desk.element import obligation, immediate_payment
 
 
 class PagePersonalCenter(BasePage):
